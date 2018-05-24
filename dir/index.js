@@ -26,7 +26,7 @@ document.getElementById("getImage").addEventListener('click', () => {
                     res.json().then(image => {
                         message.innerHTML = ""
                         document.getElementById("getImage").classList.remove("is-loading")
-                        document.getElementById("image").innerHTML = '<img src="'+image.url+'" />'
+                        document.getElementById("image").innerHTML = '<a href="'+image.url+'" download><img src="'+image.url+'" /></a>  A imagem está certa? Clique nela pra fazer download boy'
                     })
                 }, err => {
                     document.getElementById("imageInputURL").classList.add("is-danger")
